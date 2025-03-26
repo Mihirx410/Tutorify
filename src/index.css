@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,108 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/*  Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+
+  /* Header */
+
+
+/* Navbar container */
+.navbar {
+  padding: 10px 15px; /* Reduce padding */
+}
+
+/* Navbar brand (Logo) */
+.navbar-brand {
+  font-size: 20px; /* Reduce font size */
+}
+
+/* Navbar menu */
+.navbar-nav {
+  flex-direction: column; /* Stack links in mobile */
+  align-items: start; /* Align links to left */
+  gap: 8px; /* Reduce spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10px;
+}
+
+/* Navbar collapse */
+.collapse.navbar-collapse {
+  background-color: white; /* Ensure background remains white */
+  padding: 10px;
+  
+}
+
+/* Sign In & Login Button */
+.d-flex {
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px !important;
+  justify-content: space-between;
+}
+
+/* Login button */
+.btn-warning {
+  width: 100%; /* Full width on mobile */
+  text-align: center;
+}
+}
+
+
+/* Ipad and Laptop Responsive Styles */
+@media screen and (min-width: 770px) and (max-width: 985px) {
+
+/* Header */
+
+/* Navbar container */
+.navbar {
+  padding: 10px 15px; /* Reduce padding */
+}
+
+/* Navbar brand (Logo) */
+.navbar-brand {
+  font-size: 20px; /* Reduce font size */
+}
+
+/* Navbar menu */
+.navbar-nav {
+  flex-direction: column; /* Stack links in mobile */
+  align-items: start; /* Align links to left */
+  gap: 8px; /* Reduce spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -10px;
+}
+
+/* Navbar collapse */
+.collapse.navbar-collapse {
+  background-color: white; /* Ensure background remains white */
+  padding: 10px;
+  
+}
+
+/* Sign In & Login Button */
+.d-flex {
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px !important;
+  justify-content: space-between;
+}
+
+/* Login button */
+.btn-warning {
+  width: 100%; /* Full width on mobile */
+  text-align: center;
+}
 }
