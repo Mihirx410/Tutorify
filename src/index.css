@@ -76,8 +76,7 @@ button:focus-visible {
 /*  Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
 
-  /* Header */
-
+/* Header Responsiveness */
 
 /* Navbar container */
 .navbar {
@@ -97,7 +96,8 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: -10px;
+  margin-left: -20px;
+
 }
 
 /* Navbar collapse */
@@ -119,6 +119,37 @@ button:focus-visible {
 .btn-warning {
   width: 100%; /* Full width on mobile */
   text-align: center;
+}
+
+/* Hero Section Responsiveness */
+
+
+.hero-section {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.text-col {
+  text-align: center;
+}
+
+#tagline {
+  font-size: 2.2rem;
+}
+
+.hero-button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.image-container {
+  margin-top: 20px;
+}
+
+.background-shape {
+  width: 250px;
+  height: 250px;
+  top: 10%;
 }
 }
 
@@ -126,7 +157,7 @@ button:focus-visible {
 /* Ipad and Laptop Responsive Styles */
 @media screen and (min-width: 770px) and (max-width: 985px) {
 
-/* Header */
+/* Header Responsiveness */
 
 /* Navbar container */
 .navbar {
@@ -145,8 +176,7 @@ button:focus-visible {
   gap: 8px; /* Reduce spacing */
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: -10px;
+  margin-right: 5px !important;
 }
 
 /* Navbar collapse */
@@ -169,4 +199,22 @@ button:focus-visible {
   width: 100%; /* Full width on mobile */
   text-align: center;
 }
+}
+
+
+
+/* Hero Section Responsiveness */
+
+#tagline {
+  font-size: 2.5rem;
+}
+
+.hero-button {
+  font-size: 0.9rem;
+}
+
+.background-shape {
+  width: 300px;
+  height: 300px;
+  top: 15%;
 }

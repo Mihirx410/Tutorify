@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-white shadow-sm py-3">
+    <nav className="navbar navbar-expand-lg bg-white py-3">
       <div className="container">
         {/* Logo */}
         <a className="navbar-brand fw-bold fs-3 text-dark" href="#">
