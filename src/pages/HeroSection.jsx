@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import "./HeroSection.css";
 
 const HeroSection = () => {
   return (
@@ -17,7 +18,7 @@ const HeroSection = () => {
             </p>
             {/* Milestones Section */}
             <Row className="milestones">
-              <Col xs={2} className="milestone">
+              <Col xs={4} className="milestone">
                 <h2>100+</h2>
                 <p>MENTOR AT TUTORIFY</p>
               </Col>
@@ -25,7 +26,7 @@ const HeroSection = () => {
                 <h2>100+</h2>
                 <p>STUDENT SUCCESS</p>
               </Col>
-              <Col xs={2} className="milestone">
+              <Col xs={4} className="milestone">
                 <h2>100+</h2>
                 <p>STUDENT SUCCESS</p>
               </Col>
@@ -33,8 +34,6 @@ const HeroSection = () => {
             <button className="hero-button" onClick={() => console.log("Clicked!")}>
               Let’s Connect
             </button>
-
-            
           </Col>
 
           {/* Right Side: Image */}

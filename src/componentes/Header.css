@@ -1,0 +1,128 @@
+.navbar {
+    background-color: var(--white);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: var(--dark-gray-black) !important;
+  }
+  
+  .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--dark-gray-black) !important;
+  }
+  
+  #sign-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--dark-gray-black) !important;
+    font-size: 20px;
+  }
+  
+  #login-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background-color: var(--orange) !important;
+    color: var(--white) !important;
+    width: 130px;
+  }
+  
+  #header-buttons {
+    margin-top: 1px;
+  }
+  
+  /* Navbar menu */
+  .navbar-nav {
+    gap: 35px;
+    margin-left: 40px;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media screen and (max-width: 768px) {
+    /* Navbar container */
+    .navbar {
+      padding: 10px 15px; /* Reduce padding */
+    }
+  
+    /* Navbar brand (Logo) */
+    .navbar-brand {
+      font-size: 20px; /* Reduce font size */
+    }
+  
+    /* Navbar menu */
+    .navbar-nav {
+      flex-direction: column; /* Stack links in mobile */
+      align-items: start; /* Align links to left */
+      gap: 8px; /* Reduce spacing */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: -20px;
+    }
+  
+    /* Navbar collapse */
+    .collapse.navbar-collapse {
+      background-color: var(--white); /* Use custom property */
+      padding: 10px;
+    }
+  
+    /* Sign In & Login Button */
+    .d-flex {
+      flex-direction: row;
+      gap: 20px;
+      margin-top: 20px !important;
+      justify-content: space-between;
+    }
+  
+    /* Login button */
+    .btn-warning {
+      width: 100%; /* Full width on mobile */
+      text-align: center;
+    }
+  }
+  
+  /* Ipad and Laptop Responsive Styles */
+  @media screen and (min-width: 770px) and (max-width: 985px) {
+    /* Navbar container */
+    .navbar {
+      padding: 10px 15px; /* Reduce padding */
+    }
+  
+    /* Navbar brand (Logo) */
+    .navbar-brand {
+      font-size: 20px; /* Reduce font size */
+    }
+  
+    /* Navbar menu */
+    .navbar-nav {
+      flex-direction: column; /* Stack links in mobile */
+      align-items: start; /* Align links to left */
+      gap: 8px; /* Reduce spacing */
+      display: flex;
+      align-items: center;
+      margin-right: 5px !important;
+    }
+  
+    /* Navbar collapse */
+    .collapse.navbar-collapse {
+      background-color: var(--white); /* Use custom property */
+      padding: 10px;
+    }
+  
+    /* Sign In & Login Button */
+    .d-flex {
+      flex-direction: row;
+      gap: 20px;
+      margin-top: 20px !important;
+      justify-content: space-between;
+    }
+  
+    /* Login button */
+    .btn-warning {
+      width: 100%; /* Full width on mobile */
+      text-align: center;
+    }
+  }

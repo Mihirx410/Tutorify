@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Header.css";
 
-const Header = () => {
+const Header = ({ currentTheme, toggleTheme }) => {
   // State to track whether the menu is open or closed
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-white py-3">
+    <nav className="navbar navbar-expand-lg py-3">
       <div className="container">
         {/* Logo */}
         <a className="navbar-brand fw-bold fs-3 text-dark" href="#">
@@ -46,14 +47,21 @@ const Header = () => {
               <a className="nav-link text-dark fs-5" href="#">Pricing</a>
             </li>
           </ul>
-            {/* Sign In & Login Buttons */}
-        <div className="d-flex" id="header-buttons">
-          <u><a href="#" className="text-dark me-4 text-decoration-none" id="sign-button">Sign In</a></u>
-          <button className="btn btn-warning fw-bold px-4" id="login-btn">Login</button>
+          {/* Sign In & Login Buttons */}
+          <div className="d-flex" id="header-buttons">
+            <u><a href="#" className="text-dark me-4 text-decoration-none" id="sign-button">Sign In</a></u>
+            <button className="btn btn-warning fw-bold px-4" id="login-btn">Login</button>
+            <div className="theme-switcher ms-4">
+              <label htmlFor="theme-toggle" className="visually-hidden">Toggle Theme</label>
+              <input
+                type="checkbox"
+                id="theme-toggle"
+                checked={currentTheme === 'dark'}
+                onChange={toggleTheme}
+              />
+            </div>
+          </div>
         </div>
-        </div>
-
-      
       </div>
     </nav>
   );

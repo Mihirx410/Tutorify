@@ -1,3 +1,51 @@
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.theme-switcher input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background-color: var(--medium-gray);
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.theme-switcher input[type="checkbox"]::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+.theme-switcher input[type="checkbox"]:checked {
+  background-color: var(--orange);
+}
+
+.theme-switcher input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
 /* #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,126 +88,3 @@
 .read-the-docs {
   color: #888;
 } */
-
-/* Header */
-.navbar-nav{
-  gap:35px;
-  margin-left: 40px;
-}
-
-#sign-button{
-  font-size: 20px;
-}
-
-#login-btn{
- color: white;
- width: 130px;
-}
-
-#header-buttons{
-  margin-top: 1px;
-}
-
-/* Hero Section */
-
-#home{
-  margin: 40px;
-}
-
-.hero-section {
-  position: relative;
-  padding: 50px 0;
-  /* background-color: #f8f9fa; */
-}
-
-.text-col {
-  text-align: left;
-}
-
-#tagline {
-  font-size: 3.6rem;
-  font-weight: bold;
-  line-height: 1.2;
-  text-transform: uppercase;
-  max-width: 40vw;
-}
-
-#hero-p{
-  margin-top:1.4vw;
-  font-size: 1rem;
-  max-width: 30vw;
-  margin-bottom:1.4vw;
-}
-
-.highlight {
-  color: #f4a261;
-}
-
-.hero-button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #ff9800;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-
-.hero-button:hover {
-  background-color: #e68900;
-}
-
-/* Right Side Image */
-.image-container {
-  position: relative;
-  text-align: center;
-}
-
-.main-image {
-  width: 100%;
-  max-width: 400px;
-  z-index: 2;
-  position: relative;
-}
-
-.background-shape {
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  background-color: #fde0c5;
-  border-radius: 50%;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  z-index: 1;
-}
-.main-image {
-  width: 100%;
-  max-width: 100%;
-  right:50px;
-  z-index: 2;
-  position: relative;
-  mix-blend-mode: multiply; /* Makes white areas blend with background */
-}
-.milestones {
-  margin-top: 2.5em !important;
-  margin-bottom: 2.5em !important;
-}
-
-.milestone {
-  text-align: center;
-}
-
-.milestone h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #f4a261;
-}
-
-.milestone p {
-  font-size: 1rem;
-  color: #333;
-  font-weight: 600;
-}
