@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import "./HeroSection.css";
+import '../styles/HeroSection.css';
 
 const HeroSection = () => {
   return (
@@ -18,15 +18,15 @@ const HeroSection = () => {
             </p>
             {/* Milestones Section */}
             <Row className="milestones">
-              <Col xs={4} className="milestone">
+              <Col xs={12} md={5} xl={2} sm={5}  className="milestone">
                 <h2>100+</h2>
                 <p>MENTOR AT TUTORIFY</p>
               </Col>
-              <Col xs={4} className="milestone">
+              <Col xs={12} md={5} xl={2} sm={4} className="milestone">
                 <h2>100+</h2>
                 <p>STUDENT SUCCESS</p>
               </Col>
-              <Col xs={4} className="milestone">
+              <Col xs={12} md={5} xl={2} sm={4}  className="milestone">
                 <h2>100+</h2>
                 <p>STUDENT SUCCESS</p>
               </Col>
@@ -39,7 +39,7 @@ const HeroSection = () => {
           {/* Right Side: Image */}
           <Col xs={12} md={6} xl={5} className="image-container">
             <img
-              src="./girl-8148749_960_720.jpg" // Replace with actual image
+              src="./girl-8148749_960_720.jpg" 
               alt="Hero"
               className="main-image"
             />

@@ -1,128 +1,206 @@
 .navbar {
     background-color: var(--white);
     transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .navbar-brand {
+}
+
+.navbar-brand {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: var(--dark-gray-black) !important;
-  }
-  
-  .nav-link {
-    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link {
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: var(--dark-gray-black) !important;
-  }
-  
-  #sign-button {
+    position: relative; /* For positioning the underline */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-link:hover {
+    color: var(--orange) !important; /* Change color on hover */
+}
+
+/* Custom underline effect on hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0; /* Start with no width */
+    height: 2px; /* Thickness of the underline */
+    background-color: var(--orange); /* Match the hover color */
+    bottom: -2px; /* Position below the text */
+    left: 0;
+    transition: width 0.3s ease; /* Smooth width transition */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Expand to full width on hover */
+}
+
+#sign-button {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: var(--dark-gray-black) !important;
     font-size: 20px;
-  }
-  
-  #login-btn {
+}
+
+#login-btn {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     background-color: var(--orange) !important;
     color: var(--white) !important;
     width: 130px;
-  }
-  
-  #header-buttons {
+}
+
+#header-buttons {
     margin-top: 1px;
-  }
-  
-  /* Navbar menu */
-  .navbar-nav {
+}
+
+/* Navbar menu */
+.navbar-nav {
     gap: 35px;
     margin-left: 40px;
-  }
-  
-  /* Mobile Responsive Styles */
-  @media screen and (max-width: 768px) {
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
     /* Navbar container */
     .navbar {
-      padding: 10px 15px; /* Reduce padding */
+        padding: 10px 15px; /* Reduce padding */
     }
-  
+
     /* Navbar brand (Logo) */
     .navbar-brand {
-      font-size: 20px; /* Reduce font size */
+        font-size: 20px !important; /* Reduce font size */
     }
-  
+
     /* Navbar menu */
     .navbar-nav {
-      flex-direction: column; /* Stack links in mobile */
-      align-items: start; /* Align links to left */
-      gap: 8px; /* Reduce spacing */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: -20px;
+        flex-direction: column; /* Stack links in mobile */
+        align-items: center; /* Center links */
+        gap: 8px; /* Reduce spacing */
+        display: flex;
+        justify-content: center;
+        margin-left: -20px;
     }
-  
+
     /* Navbar collapse */
     .collapse.navbar-collapse {
-      background-color: var(--white); /* Use custom property */
-      padding: 10px;
+        background-color: var(--white); /* Use custom property */
+        padding: 10px;
+        max-height: 0; /* Start with 0 height when collapsed */
+        overflow: hidden; /* Hide content when collapsed */
+        transition: max-height 0.3s ease, opacity 0.3s ease; /* Smooth height and opacity transition */
+        opacity: 0; /* Start with 0 opacity */
     }
-  
+
+    .collapse.navbar-collapse.show {
+        max-height: 500px; /* Large enough to fit the menu content */
+        opacity: 1; /* Fully visible when shown */
+    }
+
+    /* Nav links */
+    .nav-link {
+        font-size: 14px; /* Reduce font size for mobile */
+    }
+
     /* Sign In & Login Button */
     .d-flex {
-      flex-direction: row;
-      gap: 20px;
-      margin-top: 20px !important;
-      justify-content: space-between;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 20px !important;
+        justify-content: space-between;
     }
-  
+
+    /* Sign In button */
+    #sign-button {
+        font-size: 16px; /* Reduce font size for mobile */
+    }
+
+    /* Login button */
+    #login-btn {
+        font-size: 16px; /* Set font size for consistency */
+    }
+
     /* Login button */
     .btn-warning {
-      width: 100%; /* Full width on mobile */
-      text-align: center;
+        width: 100%; /* Full width on mobile */
+        text-align: center;
     }
-  }
-  
-  /* Ipad and Laptop Responsive Styles */
-  @media screen and (min-width: 770px) and (max-width: 985px) {
+}
+
+/* Ipad and Laptop Responsive Styles */
+@media screen and (min-width: 770px) and (max-width: 985px) {
     /* Navbar container */
     .navbar {
-      padding: 10px 15px; /* Reduce padding */
+        padding: 10px 15px; /* Reduce padding */
     }
-  
+
     /* Navbar brand (Logo) */
     .navbar-brand {
-      font-size: 20px; /* Reduce font size */
+        font-size: 20px; /* Reduce font size */
     }
-  
+
     /* Navbar menu */
     .navbar-nav {
-      flex-direction: column; /* Stack links in mobile */
-      align-items: start; /* Align links to left */
-      gap: 8px; /* Reduce spacing */
-      display: flex;
-      align-items: center;
-      margin-right: 5px !important;
+        flex-direction: column; /* Stack links in mobile */
+        align-items: start; /* Align links to left */
+        gap: 8px; /* Reduce spacing */
+        display: flex;
+        align-items: center;
+        margin-right: 5px !important;
     }
-  
+
     /* Navbar collapse */
     .collapse.navbar-collapse {
-      background-color: var(--white); /* Use custom property */
-      padding: 10px;
+        background-color: var(--white); /* Use custom property */
+        padding: 10px;
     }
-  
+
     /* Sign In & Login Button */
     .d-flex {
-      flex-direction: row;
-      gap: 20px;
-      margin-top: 20px !important;
-      justify-content: space-between;
+        flex-direction: row;
+        gap: 20px;
+        margin-top: 20px !important;
+        justify-content: space-between;
     }
-  
+
     /* Login button */
     .btn-warning {
-      width: 100%; /* Full width on mobile */
-      text-align: center;
+        width: 100%; /* Full width on mobile */
+        text-align: center;
     }
-  }
+}
+
+/* Custom Toggle Switch for Theme Switcher */
+#theme-toggle {
+    appearance: none; /* Remove default checkbox appearance */
+    width: 40px; /* Width of the toggle track */
+    height: 20px; /* Height of the toggle track */
+    background-color: var(--medium-gray); /* Track color (off state) */
+    border-radius: 20px; /* Rounded track */
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+#theme-toggle::before {
+    content: '';
+    position: absolute;
+    width: 16px; /* Width of the thumb */
+    height: 16px; /* Height of the thumb */
+    background-color: var(--white); /* Thumb color */
+    border-radius: 50%; /* Circular thumb */
+    top: 2px; /* Center vertically */
+    left: 2px; /* Start position (off state) */
+    transition: transform 0.3s ease; /* Smooth thumb movement */
+}
+
+#theme-toggle:checked {
+    background-color: var(--orange); /* Track color (on state) */
+}
+
+#theme-toggle:checked::before {
+    transform: translateX(20px); /* Move thumb to the right (on state) */
+}

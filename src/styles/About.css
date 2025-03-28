@@ -1,0 +1,241 @@
+.about-section {
+    background-color: var(--white);
+}
+
+/* Theme-specific styles */
+.about-section.theme-light {
+    --shadow-opacity: 0.3;
+}
+
+.about-section.theme-dark {
+    --shadow-opacity: 0.5;
+}
+
+/* Image Wrapper */
+.about-section .image-wrapper {
+    position: relative;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(196, 181, 253, var(--shadow-opacity, 0.3));
+}
+
+.about-section .image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--lightOrange);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.about-section .about-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+/* Text Column */
+.about-section .text-col {
+    width: 50vw;
+    max-width: 800px;
+    padding-left: 14.2rem; /* Adjust this value to increase or decrease the space */
+}
+
+.about-section .label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.about-section .purple-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #C4B5FD;
+    border-radius: 50%;
+}
+
+.about-section .about-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--darkGrayBlack);
+    letter-spacing: 1px;
+}
+
+.about-section .about-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--darkGrayBlack);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.about-section .about-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--mediumGray);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.about-section .button-group {
+    gap: 15px;
+}
+
+.about-section .get-started-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about-section .get-started-btn:hover {
+    background-color: #E55A00;
+    transform: translateY(-2px);
+}
+
+.about-section .watch-video-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    background: none;
+    color: var(--orange);
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.about-section .watch-video-btn:hover {
+    color: #E55A00;
+    transform: translateY(-2px);
+}
+
+.about-section .play-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--white);
+    border: 2px solid var(--orange);
+    border-radius: 50%;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.about-section .play-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid var(--orange);
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    transition: border-left-color 0.3s ease;
+}
+
+.about-section .watch-video-btn:hover .play-icon {
+    border-color: #E55A00;
+}
+
+.about-section .watch-video-btn:hover .play-icon::before {
+    border-left-color: #E55A00;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 767px) {
+    .about-section .text-col {
+        width: 85vw;
+        max-width: 800px;
+        padding-left: 0rem;
+    }
+
+    .about-section .about-heading {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .about-section .about-description {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .about-section .label-wrapper {
+        justify-content: center;
+    }
+
+    .about-section .button-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .about-section .get-started-btn, .about-section .watch-video-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    .about-section .watch-video-btn {
+        justify-content: center;
+    }
+}
+
+/* Ipad and Laptop Responsive Styles */
+@media screen and (min-width: 768px) and (max-width: 985px) {
+    .about-section .text-col {
+        padding-left: 2.5rem;
+        width: 40vw;
+        max-width: 800px;
+    }
+
+    .about-section .about-heading {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .about-section .about-description {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .about-section .label-wrapper {
+        justify-content: center;
+    }
+
+    .about-section .button-group {
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .about-section .get-started-btn, .about-section .watch-video-btn {
+        width: auto;
+        padding: 12px 25px;
+    }
+
+    .about-section .watch-video-btn {
+        justify-content: center;
+    }
+}

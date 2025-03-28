@@ -28,7 +28,9 @@ const Header = ({ currentTheme, toggleTheme }) => {
           aria-expanded={isOpen ? "true" : "false"}
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="toggler-line top-line"></span>
+          <span className="toggler-line middle-line"></span>
+          <span className="toggler-line bottom-line"></span>
         </button>
 
         {/* Navbar Links with Dynamic Class */}

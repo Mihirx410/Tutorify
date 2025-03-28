@@ -3,6 +3,8 @@ import Header from './componentes/Header';
 import HeroSection from './pages/HeroSection';
 import { useState, useEffect } from 'react';
 import './app.css';
+import AboutUs from './pages/About';
+import WhyUs from './pages/WhyUs';
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState(() => {
@@ -22,6 +24,8 @@ function App() {
     <>
       <Header currentTheme={currentTheme} toggleTheme={toggleTheme} />
       <HeroSection />
+      <AboutUs/>
+      <WhyUs/>
     </>
   );
 }
