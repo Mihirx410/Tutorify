@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col } from "react-bootstrap";
+import "../styles/Price.css";
+
 
 const Price = ({ currentTheme }) => {
   const [selectedCard, setSelectedCard] = useState(null);
