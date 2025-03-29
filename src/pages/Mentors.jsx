@@ -1,39 +1,59 @@
 import React from 'react'
+import { Row, Col } from "react-bootstrap";
+import "../styles/Mentors.css";
 
-const Mentors = () => {
+const Mentors = ({ currentTheme }) => {
   return (
-    <section className={`about-section py-3 theme-${currentTheme}`} id="about">
-    <div className="container">
-    <Row className="align-items-center justify-content-between">
-        {/* Image Column */}
-        <Col xs={12} md={6} xl={5} className="mb-4 mb-md-0">
-          <div className="image-wrapper">
-            <img src="./girl-8148749_960_720.jpg" alt="Person giving thumbs up" className="about-image img-fluid" />
-          </div>
-        </Col>
+    <section className={`mentor-section py-3 theme-${currentTheme}`} id="mentor">
+      <div className="container">
+        <Row className="align-items-center justify-content-center">
+          {/* Text Column */}
+          <Col xs={12} md={6} xl={6} className="mentor-text-col">
+            <div className="mentor-label-wrapper">
+              <span className="mentor-label">Mentors</span>
+            </div>
+            <h1 className="mentor-heading">Our Top Mentor At Tutorify</h1>
+            <p className="mentor-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </Col>
 
-        {/* Text Column */}
-        <Col xs={12} md={6} xl={7} className="text-col">
-          <div className="label-wrapper">
-            <span className="about-label">ABOUT US</span>
-          </div>
-          <h1 className="about-heading">Ready To Help You</h1>
-          <h1 className="about-heading2">Learn English In Private</h1>
-          <p className="about-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus quam sem nec faucibus id sit consequat. Vivamus quam senectus vitae dolor ac.
-          </p>
-          <div className="d-flex button-group">
-            <button className="get-started-btn">Get Started</button>
-            <button className="watch-video-btn">
-              <span className="play-icon"></span> Watch Video
-            </button>
-          </div>
-        </Col>
-      </Row>
-    </div>
-  </section>
-      
-    
-  )
-}
-export default Mentors
+          {/* Image Column */}
+          <Col xs={12} md={12} xl={12} className="mb-4 mb-md-0">
+            <div className="mentor-image-wrapper" style={{ display: 'flex' }}>
+              <div className="mentor-image">
+                <img src="./girl-8148749_960_720.jpg" alt="Rizqi Assegaf" className="mentor-image-img img-fluid" />
+                <div className='mentor-image-text'>
+                <h3 className="mentor-name">Rizqi Assegaf</h3>
+                <p className="mentor-title">SD - SMA Mentor</p>
+                <p className="mentor-experience">10 Years</p>
+                <div className="mentor-rating">★★★★★ (200)</div>
+                </div>
+              </div>
+              <div className="mentor-image">
+                <img src="./girl-8148749_960_720.jpg" alt="Rifky Surya" className="mentor-image-img img-fluid" />
+                <div className='mentor-image-text'>
+                <h3 className="mentor-name">Rizqi Assegaf</h3>
+                <p className="mentor-title">SD - SMA Mentor</p>
+                <p className="mentor-experience">10 Years</p>
+                <div className="mentor-rating">★★★★★ (200)</div>
+                </div>
+              </div>
+              <div className="mentor-image">
+                <img src="./girl-8148749_960_720.jpg" alt="Louis Cahya" className="mentor-image-img img-fluid" />
+                <div className='mentor-image-text'>
+                <h3 className="mentor-name">Rizqi Assegaf</h3>
+                <p className="mentor-title">SD - SMA Mentor</p>
+                <p className="mentor-experience">10 Years</p>
+                <div className="mentor-rating">★★★★★ (200)</div>
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </div>
+    </section>
+  );
+};
+
+export default Mentors;
