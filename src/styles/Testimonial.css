@@ -1,0 +1,263 @@
+.testimony-section {
+    background-color: var(--white);
+    margin: 20px;
+}
+
+/* Theme-specific styles */
+.testimony-section.theme-light {
+    --shadow-opacity: 0.3;
+}
+
+.testimony-section.theme-dark {
+    --shadow-opacity: 0.5;
+}
+
+/* Text Column */
+.testimony-text-col {
+    text-align: left;
+}
+
+.testimony-label-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.testimony-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--orange);
+    letter-spacing: 1.8px;
+}
+
+.testimony-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    color: var(--darkGrayBlack);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.testimony-quote {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--mediumGray);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    transition: opacity 0.3s ease;
+}
+
+.testimony-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--darkGrayBlack);
+    margin-bottom: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.testimony-role {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--mediumGray);
+    transition: opacity 0.3s ease;
+}
+
+/* Image Column */
+.testimony-image-col {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.testimony-image-wrapper {
+    position: relative;
+    width: 300px;
+}
+
+.testimony-image {
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(196, 181, 253, var(--shadow-opacity, 0.3));
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.testimony-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.testimony-nav-counter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--mediumGray);
+}
+
+.testimony-nav-btn {
+    width: 30px;
+    height: 30px;
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimony-nav-btn:hover {
+    background-color: var(--darkGrayBlack);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 767px) {
+    .testimony-text-col {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .testimony-heading {
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .testimony-quote {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .testimony-name {
+        font-size: 16px;
+    }
+
+    .testimony-role {
+        font-size: 12px;
+    }
+
+    .testimony-label-wrapper {
+        justify-content: center;
+    }
+
+    .testimony-label {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .testimony-image-col {
+        justify-content: center;
+    }
+
+    .testimony-image-wrapper {
+        width: 250px;
+    }
+
+    .testimony-image {
+        height: 250px;
+    }
+
+    .testimony-nav {
+        justify-content: center;
+    }
+}
+
+/* iPad and Laptop Responsive Styles */
+@media screen and (min-width: 768px) and (max-width: 985px) {
+    .testimony-text-col {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .testimony-heading {
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center;
+    }
+
+    .testimony-quote {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .testimony-name {
+        font-size: 16px;
+    }
+
+    .testimony-role {
+        font-size: 12px;
+    }
+
+    .testimony-label-wrapper {
+        justify-content: center;
+    }
+
+    .testimony-label {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    .testimony-image-col {
+        justify-content: center;
+    }
+
+    .testimony-image-wrapper {
+        width: 250px;
+    }
+
+    .testimony-image {
+        height: 250px;
+    }
+
+    .testimony-nav {
+        justify-content: center;
+    }
+}
+
+/* Tablets and Small Laptops (986px to 1200px) */
+@media screen and (min-width: 986px) and (max-width: 1200px) {
+    .testimony-text-col {
+        text-align: left;
+    }
+
+    .testimony-heading {
+        font-size: 34px;
+        line-height: 1.2em;
+    }
+
+    .testimony-quote {
+        font-size: 15px;
+    }
+
+    .testimony-name {
+        font-size: 17px;
+    }
+
+    .testimony-role {
+        font-size: 13px;
+    }
+
+    .testimony-label-wrapper {
+        justify-content: flex-start;
+    }
+
+    .testimony-image-wrapper {
+        width: 270px;
+    }
+
+    .testimony-image {
+        height: 270px;
+    }
+}
