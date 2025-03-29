@@ -1,0 +1,191 @@
+.footer-section {
+    background-color: var(--white);
+    padding: 40px 0;
+}
+
+/* Theme-specific styles */
+.footer-section.theme-light {
+    --shadow-opacity: 0.3;
+}
+
+.footer-section.theme-dark {
+    --shadow-opacity: 0.5;
+}
+
+/* Text and Button Column */
+.footer-text-col {
+    text-align: left;
+}
+
+.footer-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.footer-description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.footer-btn {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-btn:hover {
+    background-color: var(--white);
+    color: var(--orange);
+}
+
+/* Links Column */
+.footer-links-col {
+    text-align: right;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-link {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--orange);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 767px) {
+    .footer-text-col {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-heading {
+        font-size: 24px;
+    }
+
+    .footer-description {
+        font-size: 14px;
+    }
+
+    .footer-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .footer-links-col {
+        text-align: center;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .footer-section {
+        padding: 20px 0;
+    }
+}
+
+/* iPad and Laptop Responsive Styles */
+@media screen and (min-width: 768px) and (max-width: 985px) {
+    .footer-text-col {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .footer-heading {
+        font-size: 24px;
+    }
+
+    .footer-description {
+        font-size: 14px;
+    }
+
+    .footer-btn {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .footer-links-col {
+        text-align: center;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .footer-section {
+        padding: 20px 0;
+    }
+}
+
+/* Tablets and Small Laptops (986px to 1200px) */
+@media screen and (min-width: 986px) and (max-width: 1200px) {
+    .footer-text-col {
+        text-align: left;
+    }
+
+    .footer-heading {
+        font-size: 26px;
+    }
+
+    .footer-description {
+        font-size: 15px;
+    }
+
+    .footer-btn {
+        font-size: 13px;
+        padding: 9px 18px;
+    }
+
+    .footer-links-col {
+        text-align: right;
+    }
+
+    .footer-links li {
+        margin-bottom: 9px;
+    }
+
+    .footer-link {
+        font-size: 15px;
+    }
+
+    .footer-section {
+        padding: 30px 0;
+    }
+}
