@@ -6,6 +6,7 @@ import './app.css';
 import AboutUs from './pages/About';
 import WhyUs from './pages/WhyUs';
 import Mentors from './pages/Mentors';
+import Price from './pages/Price';
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState(() => {
@@ -28,6 +29,7 @@ function App() {
       <AboutUs/>
       <WhyUs/>
       <Mentors/>
+      <Price/>
     </>
   );
 }
