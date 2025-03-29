@@ -1,5 +1,6 @@
 .about-section {
     background-color: var(--white);
+    margin:20px;
 }
 
 /* Theme-specific styles */
@@ -42,9 +43,8 @@
 
 /* Text Column */
 .about-section .text-col {
-    width: 50vw;
-    max-width: 800px;
-    padding-left: 14.2rem; /* Adjust this value to increase or decrease the space */
+    max-width:540px;
+    padding-left: 0rem; /* Adjust this value to increase or decrease the space */
 }
 
 .about-section .label-wrapper {
@@ -66,17 +66,25 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 14px;
-    color: var(--darkGrayBlack);
-    letter-spacing: 1px;
+    color: var(--orange);
+    letter-spacing: 1.8px;
+    margin-top:-1em;
 }
 
 .about-section .about-heading {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 38px;
+    color: var(--darkGrayBlack);
+    line-height: 1.3;
+}
+
+.about-section .about-heading2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
     color: var(--darkGrayBlack);
     margin-bottom: 10px;
-    line-height: 1.2;
 }
 
 .about-section .about-description {
@@ -86,11 +94,14 @@
     color: var(--mediumGray);
     margin-bottom: 15px;
     line-height: 1.6;
+    max-width: 360px;
+    text-align: left;
 }
 
 /* Buttons */
 .about-section .button-group {
-    gap: 15px;
+    gap: 60px;
+    margin-top: 30px;
 }
 
 .about-section .get-started-btn {
@@ -166,19 +177,26 @@
 /* Mobile Responsive Styles */
 @media screen and (max-width: 767px) {
     .about-section .text-col {
-        width: 85vw;
-        max-width: 800px;
         padding-left: 0rem;
     }
 
     .about-section .about-heading {
         font-size: 28px;
+        line-height: 30px;
         text-align: center;
+    }
+    .about-section .about-heading2{
+        font-size: 28px;
+        text-align: center;
+        margin-top: -6px !important;
     }
 
     .about-section .about-description {
-        font-size: 14px;
+        font-size: 13px;
         text-align: center;
+        margin-top:1.8em;
+        max-width: max-content;
+        
     }
 
     .about-section .label-wrapper {
@@ -189,35 +207,46 @@
         flex-direction: column;
         align-items: center;
         gap: 15px;
+        
     }
 
     .about-section .get-started-btn, .about-section .watch-video-btn {
         width: 100%;
         text-align: center;
         padding: 12px;
+        margin-top:10px;
     }
 
     .about-section .watch-video-btn {
         justify-content: center;
+        margin-bottom: 10px;
+    }
+    .about-section .about-label {
+        margin-top:1em;
+        margin-bottom: 1em;
     }
 }
 
 /* Ipad and Laptop Responsive Styles */
 @media screen and (min-width: 768px) and (max-width: 985px) {
     .about-section .text-col {
-        padding-left: 2.5rem;
-        width: 40vw;
-        max-width: 800px;
+        padding-left: 0;
     }
 
     .about-section .about-heading {
-        font-size: 32px;
+        font-size: 30px;
         text-align: center;
+        line-height: 1em;
+    }
+    .about-section .about-heading2{
+        font-size: 30px;
+        text-align: center;
+        margin-top: -6px;
     }
 
     .about-section .about-description {
-        font-size: 15px;
-        text-align: center;
+        font-size: 12px;
+        text-align: center !important;
     }
 
     .about-section .label-wrapper {
@@ -237,5 +266,49 @@
 
     .about-section .watch-video-btn {
         justify-content: center;
+    }
+    .about-section .about-label {
+        margin-bottom: 0.7em;
+    }
+}
+
+/* Tablets and Small Laptops (986px to 1200px) */
+@media screen and (min-width: 986px) and (max-width: 1200px) {
+    .about-section .text-col {
+        padding-left: 3rem;
+    }
+
+    .about-section .about-heading {
+        font-size: 34px;
+        text-align: left;
+        line-height: 1.2em;
+    }
+
+    .about-section .about-heading2 {
+        font-size: 34px;
+        text-align: left;
+    }
+
+    .about-section .about-description {
+        font-size: 14px;
+        text-align: left;
+        max-width: 360px;
+    }
+
+    .about-section .label-wrapper {
+        justify-content: flex-start;
+    }
+
+    .about-section .button-group {
+        gap: 30px;
+    }
+
+    .about-section .get-started-btn, .about-section .watch-video-btn {
+        width: auto;
+        padding: 12px 28px;
+    }
+
+    .about-section .watch-video-btn {
+        justify-content: flex-start;
     }
 }

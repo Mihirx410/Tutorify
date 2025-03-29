@@ -1,5 +1,6 @@
 .whyus-section {
     background-color: var(--white);
+    margin: 20px;
 }
 
 /* Theme-specific styles */
@@ -12,7 +13,7 @@
 }
 
 /* Image Wrapper */
-.image-wrapper {
+.whyus-section .image-wrapper {
     position: relative;
     background-color: var(--white);
     border-radius: 20px;
@@ -20,7 +21,7 @@
     box-shadow: 0 5px 15px rgba(196, 181, 253, var(--shadow-opacity, 0.3));
 }
 
-.image-wrapper::before {
+.whyus-section .image-wrapper::before {
     content: '';
     position: absolute;
     top: 10px;
@@ -32,7 +33,7 @@
     z-index: 1;
 }
 
-.whyus-image {
+.whyus-section .whyus-image {
     position: relative;
     width: 100%;
     height: auto;
@@ -41,26 +42,27 @@
 }
 
 /* Text Column */
-.text-col {
+.whyus-section .text-col {
     padding-right: 20px; /* Reduced gap between columns */
 }
 
-.label-wrapper {
+.whyus-section .label-wrapper {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 5px;
 }
 
-.whyus-label {
+.whyus-section .whyus-label {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 14px;
     color: var(--orange);
-    letter-spacing: 1px;
+    letter-spacing: 1.8px;
+    margin-bottom:0.3em;
 }
 
-.whyus-heading {
+.whyus-section .whyus-heading {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 36px;
@@ -69,13 +71,15 @@
     line-height: 1.2;
 }
 
-.whyus-list {
+.whyus-section .whyus-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    max-width: 600px;
+    margin-top: 20px;
 }
 
-.whyus-list li {
+.whyus-section .whyus-list li {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -86,7 +90,7 @@
     line-height: 1.6;
 }
 
-.whyus-list li::before {
+.whyus-section .whyus-list li::before {
     content: '';
     position: absolute;
     left: 0;
@@ -101,7 +105,7 @@
     justify-content: center;
 }
 
-.whyus-list li::after {
+.whyus-section .whyus-list li::after {
     content: '✔';
     position: absolute;
     left: 4px;
@@ -113,52 +117,88 @@
 
 /* Mobile Responsive Styles */
 @media screen and (max-width: 768px) {
-    .text-col {
+    .whyus-section .text-col {
         padding-right: 0;
     }
 
-    .whyus-heading {
+    .whyus-section .whyus-heading {
         font-size: 28px;
         text-align: center;
+        margin-top: -8px !important;
     }
 
-    .whyus-list li {
+    .whyus-section .whyus-list li {
         font-size: 14px;
         text-align: center;
         padding-left: 0;
     }
 
-    .whyus-list li::before, .whyus-list li::after {
+    .whyus-section .whyus-list li::before, .whyus-section .whyus-list li::after {
         display: none; /* Hide checkmark on mobile for simplicity */
     }
 
-    .label-wrapper {
+    .whyus-section .label-wrapper {
         justify-content: center;
+        margin-top:1em;
+        margin-bottom: 1em;
     }
 }
 
 /* Ipad and Laptop Responsive Styles */
 @media screen and (min-width: 770px) and (max-width: 985px) {
-    .text-col {
-        padding-right: 0;
+    .whyus-section .text-col {
+        padding-right: 0.3em;
     }
 
-    .whyus-heading {
+    .whyus-section .whyus-heading {
         font-size: 32px;
         text-align: center;
     }
 
-    .whyus-list li {
+    .whyus-section .whyus-list li {
         font-size: 15px;
         text-align: center;
         padding-left: 0;
     }
 
-    .whyus-list li::before, .whyus-list li::after {
+    .whyus-section .whyus-list li::before, .whyus-section .whyus-list li::after {
         display: none;
     }
 
-    .label-wrapper {
+    .whyus-section .label-wrapper {
         justify-content: center;
+        
+    }
+}
+
+/* Tablets and Small Laptops (986px to 1200px) */
+@media screen and (min-width: 986px) and (max-width: 1200px) {
+    .whyus-section .text-col {
+        padding-right: 2rem;
+        margin-right: auto;
+    }
+
+    .whyus-section .whyus-heading {
+        font-size: 34px;
+        text-align: left;
+        line-height: 1.2;
+    }
+
+    .whyus-section .whyus-list li {
+        font-size: 15.5px;
+        text-align: left;
+        padding-left: 30px;
+    }
+
+    .whyus-section .whyus-list li::before {
+        display: flex;
+    }
+
+    .whyus-section .whyus-list li::after {
+        display: block;
+    }
+
+    .whyus-section .label-wrapper {
+        justify-content: flex-start;
     }
 }

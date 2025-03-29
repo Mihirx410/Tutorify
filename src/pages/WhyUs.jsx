@@ -7,7 +7,7 @@ const WhyUs = ({ currentTheme }) => {
     <section className={`whyus-section py-3 theme-${currentTheme}`} id="whyus">
       <div className="container">
         {/* Main Content: Text and Image */}
-        <Row className="align-items-center">
+        <Row className="align-items-center justify-content-between">
           {/* Text Column */}
           <Col xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }} xl={7} className="text-col">
             <div className="label-wrapper">
