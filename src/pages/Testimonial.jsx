@@ -47,7 +47,7 @@ const Testimonial = ({ currentTheme }) => {
           {/* Text Column */}
           <Col md={6} className="testimony-text-col">
             <div className="testimony-label-wrapper">
-              <span className="testimony-label">Testimoni</span>
+              <span className="testimony-label">TESTIMONIALS</span>
             </div>
             <h1 className="testimony-heading">What They Say About Us</h1>
             <p className="testimony-quote">

@@ -17,7 +17,7 @@ const Price = ({ currentTheme }) => {
           {/* Text Column */}
           <Col xs={12} className="price-text-col">
             <div className="price-label-wrapper">
-              <span className="price-label">Pricing</span>
+              <span className="price-label">PRICING</span>
             </div>
             <h1 className="price-heading">How Much Do I Have To Pay</h1>
             <p className="price-description">

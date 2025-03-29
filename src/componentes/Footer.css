@@ -1,5 +1,5 @@
 .footer-section {
-    background-color: var(--white);
+    background-color: var(--orange);
     padding: 40px 0;
 }
 
@@ -38,8 +38,8 @@
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 14px;
-    background-color: var(--orange);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--orange);
     padding: 10px 20px;
     border: none;
     border-radius: 20px;

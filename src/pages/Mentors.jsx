@@ -10,7 +10,7 @@ const Mentors = ({ currentTheme }) => {
           {/* Text Column */}
           <Col xs={12} md={6} xl={6} className="mentor-text-col">
             <div className="mentor-label-wrapper">
-              <span className="mentor-label">Mentors</span>
+              <span className="mentor-label">MENTORS</span>
             </div>
             <h1 className="mentor-heading">Our Top Mentor At Tutorify</h1>
             <p className="mentor-description">
